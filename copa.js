@@ -1,6 +1,6 @@
 const datosIniciales = {
   nombre: 'Copa Pixel 2026',
-  duracionSegundos: 10,
+  duracionSegundos: 180,
   participantes: [
     { nombre: 'Ryu Master', puntos: 2400, pais: 'JP' },
     { nombre: 'LuciaFire', puntos: 3100, pais: 'ES' },
