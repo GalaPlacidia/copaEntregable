@@ -1,6 +1,6 @@
 const datosIniciales = {
   nombre: 'Copa Pixel 2026',
-  duracionSegundos: 180,
+  duracionSegundos: 10,
   participantes: [
     { nombre: 'Ryu Master', puntos: 2400, pais: 'JP' },
     { nombre: 'LuciaFire', puntos: 3100, pais: 'ES' },
@@ -87,8 +87,13 @@ function cargarDatos() {
 }
 
 botonResetear.addEventListener('click', () => {
-  cargarDatos();
-  localStorage.removeItem(nombre);
+  let texto2 = JSON.parse(texto);
+  for (let i = 0; i < texto2.participantes.length; i++) {
+    let nombre = texto2.participantes[i].nombre;
+    let puntos = texto2.participantes[i].puntos;
 
+    datosIniciales.participantes[i].nombre = nombre;
+    datosIniciales.participantes[i].puntos = puntos;
+  }
   pintar();
 });
